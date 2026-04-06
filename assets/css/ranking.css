@@ -1,0 +1,281 @@
+.ranking-layout {
+    display: grid;
+    gap: 12px;
+}
+
+.ranking-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ranking-header h1 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.ranking-header p {
+    margin-top: 4px;
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+}
+
+.ranking-list {
+    display: grid;
+    gap: 8px;
+}
+
+.ranking-row {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--bg-elevated) 72%, transparent);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ranking-row.is-me {
+    border-color: color-mix(in srgb, var(--accent-secondary) 60%, transparent);
+    background: color-mix(in srgb, var(--accent-secondary) 12%, transparent);
+}
+
+.ranking-row.is-top-1 {
+    border-color: color-mix(in srgb, var(--accent-gold) 72%, transparent);
+    background: linear-gradient(120deg, color-mix(in srgb, var(--accent-gold) 16%, transparent), color-mix(in srgb, var(--bg-elevated) 82%, transparent));
+}
+
+.ranking-row.is-top-2 {
+    border-color: rgba(185, 197, 223, 0.55);
+    background: linear-gradient(120deg, rgba(185, 197, 223, 0.17), color-mix(in srgb, var(--bg-elevated) 82%, transparent));
+}
+
+.ranking-row.is-top-3 {
+    border-color: rgba(195, 150, 104, 0.52);
+    background: linear-gradient(120deg, rgba(195, 150, 104, 0.17), color-mix(in srgb, var(--bg-elevated) 82%, transparent));
+}
+
+.ranking-pos {
+    min-width: 42px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.ranking-medal {
+    font-size: 1rem;
+}
+
+.ranking-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ranking-user-meta {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.ranking-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ranking-room {
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ranking-value {
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.ranking-empty {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 22px;
+}
+
+.ranking-error {
+    border: 1px solid rgba(231, 76, 60, 0.38);
+    background: rgba(231, 76, 60, 0.13);
+    color: #ffb2a8;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.profile-layout {
+    display: grid;
+    gap: 12px;
+}
+
+.profile-hero {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background:
+        linear-gradient(120deg, color-mix(in srgb, var(--accent-secondary) 16%, transparent), color-mix(in srgb, var(--accent-primary) 14%, transparent)),
+        color-mix(in srgb, var(--bg-surface) 95%, transparent);
+    overflow: hidden;
+}
+
+.profile-cover {
+    min-height: 102px;
+    background: linear-gradient(120deg, color-mix(in srgb, var(--accent-secondary) 40%, transparent), color-mix(in srgb, var(--accent-primary) 30%, transparent));
+}
+
+.profile-main {
+    margin-top: -34px;
+    padding: 0 14px 14px;
+}
+
+.profile-main-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.profile-id {
+    display: grid;
+    gap: 3px;
+}
+
+.profile-id h1 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.profile-id p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.84rem;
+}
+
+.profile-stats {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.profile-stat {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px;
+    background: color-mix(in srgb, var(--bg-elevated) 72%, transparent);
+    text-align: center;
+}
+
+.profile-stat-value {
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.profile-stat-label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.74rem;
+    margin-top: 2px;
+}
+
+.profile-badges-row {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.profile-content {
+    display: grid;
+    gap: 10px;
+}
+
+.profile-tab-content {
+    display: none;
+}
+
+.profile-tab-content.is-active {
+    display: block;
+}
+
+.profile-entry {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--bg-elevated) 72%, transparent);
+    padding: 10px;
+    overflow: hidden;
+}
+
+.profile-entry.is-unread {
+    border-color: color-mix(in srgb, var(--accent-secondary) 54%, transparent);
+    background: color-mix(in srgb, var(--accent-secondary) 10%, transparent);
+}
+
+.profile-entry-title {
+    margin: 0 0 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.profile-entry-meta {
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+}
+
+.profile-entry-meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profile-entry-meta-grid span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.thread-message {
+    margin-left: 0;
+    max-width: 88%;
+}
+
+.thread-message--mine {
+    margin-left: auto;
+    border-color: color-mix(in srgb, var(--accent-secondary) 56%, transparent);
+    background: color-mix(in srgb, var(--accent-secondary) 10%, transparent);
+}
+
+.thread-messages {
+    max-height: 55vh;
+    overflow: auto;
+}
+
+.conversation-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+@media (min-width: 640px) {
+    .profile-stats {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
